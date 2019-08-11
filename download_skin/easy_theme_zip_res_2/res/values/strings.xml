@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_font">main_font.ttf</string>
+    <string name="sub_font">sub_font.ttf</string>
+</resources>
