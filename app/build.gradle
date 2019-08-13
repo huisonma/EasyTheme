@@ -11,10 +11,31 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            keyAlias 'huison'
+            keyPassword 'huison'
+            storeFile file('../key_store')
+            storePassword 'huison'
+        }
+
+        debug {
+            keyAlias 'huison'
+            keyPassword 'huison'
+            storeFile file('../key_store')
+            storePassword 'huison'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
 }
@@ -30,7 +51,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation project(':skin')
+    // implementation project(':skin')
+    implementation 'com.github.huisonma:EasyTheme:1.0.3'
 
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
