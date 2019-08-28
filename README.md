@@ -1,3 +1,7 @@
+![效果图](https://github.com/huisonma/EasyTheme/blob/master/sample.gif)
+
+
+
 支持Apk、Zip切换皮肤
 支持background、textColor、typeface、textSize等属性
 
